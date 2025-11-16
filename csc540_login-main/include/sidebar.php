@@ -44,9 +44,9 @@
 
   <nav class="nav flex-column gap-2">
     <a href="dashboard.php" class="nav-link <?php echo ($page_name == 'dashboard') ? 'active' : ''; ?>">
-      <span class="material-symbols-outlined me-2">inventory_2</span> Profile
+      <span class="material-symbols-outlined me-2">inventory_2</span> Dashboard
     </a>
-    <a href="create_capsule.php" class="nav-link <?php echo ($page_name == 'create_capsule') ? 'active' : ''; ?>">
+    <a href="create_post.php" class="nav-link <?php echo ($page_name == 'create_post') ? 'active' : ''; ?>">
       <span class="material-symbols-outlined me-2">add_circle</span> Create Capsule
     </a>
     <a href="feed.php" class="nav-link <?php echo ($page_name == 'feed') ? 'active' : ''; ?>">

@@ -27,12 +27,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = mysqli_real_escape_string($db_connection, $username);
 
     // Fetch user details including hash
-    $select_users = $db_connection->prepare("
-        SELECT u.user_id, u.role_id, cr.username, cr.password_hash
-        FROM Users u
-        JOIN Credentials cr ON u.user_id = cr.user_id
-        WHERE cr.username = ? LIMIT 1
-    ");
+   $check_user = $db_connection->prepare("
+    SELECT user_id, password 
+    FROM users
+    WHERE username = ?
+");
+
     $select_users->bind_param("s", $username);
     $select_users->execute();
     $select_users->bind_result($user_id, $user_role, $db_username, $db_password_hash);

@@ -1,13 +1,14 @@
 <?php
 //======================================================================
-// DATABASE CONNECTION
+// PATH CONFIGURATION — FINAL AND CORRECT
 //======================================================================
 
-$directory = "/csc540_login-main"; // Change to your project folder
+DEFINE("BASE_URL", "http://localhost/CSC540/csc540_login-main");
 
-/* Define base url path */
-DEFINE("BASE_URL", $directory);
-DEFINE("ROOT_PATH", $_SERVER["DOCUMENT_ROOT"] . $directory);
-DEFINE("ROOT_SRC_PATH", $_SERVER["DOCUMENT_ROOT"] . $directory . "/php");
-DEFINE("SRC_PATH", $directory . "/php");
+// Server file system paths (used for includes)
+DEFINE("ROOT_PATH", $_SERVER["DOCUMENT_ROOT"] . "/CSC540/csc540_login-main");
+DEFINE("ROOT_SRC_PATH", $_SERVER["DOCUMENT_ROOT"] . "/CSC540/csc540_login-main/php");
+
+// Browser paths (used for href, script, img, css)
+DEFINE("SRC_PATH", "/CSC540/csc540_login-main/php");
 ?>
